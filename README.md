@@ -20,13 +20,13 @@ limitations under the License.
 
 # abs2
 
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] [![dependencies][dependencies-image]][dependencies-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Compute the squared [absolute value][absolute-value] of a complex number.
+> Compute the squared [absolute value][absolute-value] of a double-precision [complex][@stdlib/complex/float64] floating-point number.
 
 <section class="intro">
 
-The [absolute value][absolute-value] of a complex number is defined as
+The [absolute value][absolute-value] of a [complex][@stdlib/complex/float64] number is defined as
 
 <!-- <equation class="equation" label="eq:absolute_value_complex" align="center" raw="|a + bi| = \sqrt{a^2 + b^2}" alt="Absolute value"> -->
 
@@ -61,12 +61,14 @@ npm install @stdlib/math-base-special-cabs2
 var cabs2 = require( '@stdlib/math-base-special-cabs2' );
 ```
 
-#### cabs2( re, im )
+#### cabs2( z )
 
-Computes the squared [absolute value][absolute-value] of a `complex` number comprised of a **real** component `re` and an **imaginary** component `im`.
+Computes the squared [absolute value][absolute-value] of a double-precision [complex][@stdlib/complex/float64] floating-point number.
 
 ```javascript
-var y = cabs2( 5.0, 3.0 );
+var Complex128 = require( '@stdlib/complex-float64' );
+
+var y = cabs2( new Complex128( 5.0, 3.0 ) );
 // returns 34.0
 ```
 
@@ -79,7 +81,7 @@ var y = cabs2( 5.0, 3.0 );
 ## Notes
 
 -   Be careful to avoid overflow and underflow.
--   Depending on the environment, this function _may_ have better performance than computing the [absolute value][absolute-value] of a `complex` number and then squaring. Hence, where appropriate, consider using `cabs2()` over [`cabs()`][@stdlib/math/base/special/cabs].
+-   Depending on the environment, this function _may_ have better performance than computing the [absolute value][absolute-value] of a [complex][@stdlib/complex/float64] number and then squaring. Hence, where appropriate, consider using `cabs2()` over [`cabs()`][@stdlib/math/base/special/cabs].
 
 </section>
 
@@ -89,26 +91,20 @@ var y = cabs2( 5.0, 3.0 );
 
 ## Examples
 
+<!-- eslint-disable max-len -->
+
 <!-- eslint no-undef: "error" -->
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64' );
-var randu = require( '@stdlib/random-base-randu' );
-var round = require( '@stdlib/math-base-special-round' );
-var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
 var cabs2 = require( '@stdlib/math-base-special-cabs2' );
 
-var re;
-var im;
 var z;
 var i;
-
 for ( i = 0; i < 100; i++ ) {
-    re = round( randu()*100.0 ) - 50.0;
-    im = round( randu()*100.0 ) - 50.0;
-    z = new Complex128( re, im );
-    console.log( 'cabs2(%s) = %d', z.toString(), cabs2( real(z), imag(z) ) );
+    z = new Complex128( discreteUniform( -50, 50 ), discreteUniform( -50, 50 ) );
+    console.log( 'cabs2(%s) = %d', z.toString(), cabs2( z ) );
 }
 ```
 
@@ -176,8 +172,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-base-special-cabs2/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-base-special-cabs2?branch=main
 
+<!--
+
 [dependencies-image]: https://img.shields.io/david/stdlib-js/math-base-special-cabs2.svg
 [dependencies-url]: https://david-dm.org/stdlib-js/math-base-special-cabs2/main
+
+-->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
 [chat-url]: https://gitter.im/stdlib-js/stdlib/
@@ -192,9 +192,9 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 
 [@stdlib/math/base/special/cabs]: https://github.com/stdlib-js/math-base-special-cabs
 
-<!-- <related-links> -->
+[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64
 
-[@stdlib/math/base/special/cabs]: https://github.com/stdlib-js/math-base-special-cabs
+<!-- <related-links> -->
 
 [@stdlib/math/base/special/abs2]: https://github.com/stdlib-js/math-base-special-abs2
 
