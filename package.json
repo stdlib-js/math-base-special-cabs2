@@ -18,7 +18,9 @@
     "benchmark": "./benchmark",
     "doc": "./docs",
     "example": "./examples",
+    "include": "./include",
     "lib": "./lib",
+    "src": "./src",
     "test": "./test"
   },
   "types": "./docs/types",
@@ -39,7 +41,8 @@
   "dependencies": {
     "@stdlib/complex-imag": "^0.0.x",
     "@stdlib/complex-real": "^0.0.x",
-    "@stdlib/types": "^0.0.x"
+    "@stdlib/types": "^0.0.x",
+    "@stdlib/utils-library-manifest": "^0.0.x"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.0.x",
