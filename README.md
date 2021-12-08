@@ -18,7 +18,7 @@ limitations under the License.
 
 -->
 
-# abs2
+# cabs2
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
