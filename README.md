@@ -138,21 +138,7 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- /.intro -->
 
-<section class="installation">
-
-## Installation
-
-```bash
-npm install @stdlib/math-base-special-cabs2
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-</section>
+<!-- C usage documentation. -->
 
 <section class="usage">
 
