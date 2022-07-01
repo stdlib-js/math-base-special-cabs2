@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2021 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,25 +16,31 @@
 * limitations under the License.
 */
 
-#ifndef STDLIB_MATH_BASE_SPECIAL_CABS2_H
-#define STDLIB_MATH_BASE_SPECIAL_CABS2_H
+// TypeScript Version: 2.0
 
-#include <complex.h>
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-/*
-* If C++, prevent name mangling so that the compiler emits a binary file having undecorated names, thus mirroring the behavior of a C compiler.
-*/
-#ifdef __cplusplus
-extern "C" {
-#endif
+import { Complex128 } from '@stdlib/types/object';
 
 /**
 * Computes the squared absolute value of a double-precision complex floating-point number.
+*
+* ## Notes
+*
+* -   The absolute value of a complex number is its distance from zero.
+*
+* @param z - complex number
+* @returns squared absolute value
+*
+* @example
+* var Complex128 = require( `@stdlib/complex/float64` );
+*
+* var v = cabs2( new Complex128( 5.0, 3.0 ) );
+* // returns 34.0
 */
-double stdlib_base_cabs2( const double complex z );
+declare function cabs2( z: Complex128 ): number;
 
-#ifdef __cplusplus
-}
-#endif
 
-#endif // !STDLIB_MATH_BASE_SPECIAL_CABS2_H
+// EXPORTS //
+
+export = cabs2;
