@@ -33,11 +33,11 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Compute the squared [absolute value][absolute-value] of a double-precision [complex][@stdlib/complex/float64] floating-point number.
+> Compute the squared [absolute value][absolute-value] of a double-precision [complex][@stdlib/complex/float64/ctor] floating-point number.
 
 <section class="intro">
 
-The [absolute value][absolute-value] of a [complex][@stdlib/complex/float64] number is defined as
+The [absolute value][absolute-value] of a [complex][@stdlib/complex/float64/ctor] number is defined as
 
 <!-- <equation class="equation" label="eq:absolute_value_complex" align="center" raw="|a + bi| = \sqrt{a^2 + b^2}" alt="Absolute value"> -->
 
@@ -88,10 +88,10 @@ var cabs2 = require( '@stdlib/math-base-special-cabs2' );
 
 #### cabs2( z )
 
-Computes the squared [absolute value][absolute-value] of a double-precision [complex][@stdlib/complex/float64] floating-point number.
+Computes the squared [absolute value][absolute-value] of a double-precision [complex][@stdlib/complex/float64/ctor] floating-point number.
 
 ```javascript
-var Complex128 = require( '@stdlib/complex-float64' );
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
 
 var y = cabs2( new Complex128( 5.0, 3.0 ) );
 // returns 34.0
@@ -106,7 +106,7 @@ var y = cabs2( new Complex128( 5.0, 3.0 ) );
 ## Notes
 
 -   Be careful to avoid overflow and underflow.
--   Depending on the environment, this function _may_ have better performance than computing the [absolute value][absolute-value] of a [complex][@stdlib/complex/float64] number and then squaring. Hence, where appropriate, consider using `cabs2()` over [`cabs()`][@stdlib/math/base/special/cabs].
+-   Depending on the environment, this function _may_ have better performance than computing the [absolute value][absolute-value] of a [complex][@stdlib/complex/float64/ctor] number and then squaring. Hence, where appropriate, consider using `cabs2()` over [`cabs()`][@stdlib/math/base/special/cabs].
 
 </section>
 
@@ -121,7 +121,7 @@ var y = cabs2( new Complex128( 5.0, 3.0 ) );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var Complex128 = require( '@stdlib/complex-float64' );
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var cabs2 = require( '@stdlib/math-base-special-cabs2' );
 
@@ -172,7 +172,7 @@ for ( i = 0; i < 100; i++ ) {
 Computes the squared [absolute value][absolute-value] of a double-precision complex floating-point number.
 
 ```c
-#include "stdlib/complex/float64.h"
+#include "stdlib/complex/float64/ctor.h"
 
 stdlib_complex128_t z = stdlib_complex128( 5.0, 3.0 );
 
@@ -208,7 +208,7 @@ double stdlib_base_cabs2( const stdlib_complex128_t z );
 
 ```c
 #include "stdlib/math/base/special/cabs2.h"
-#include "stdlib/complex/float64.h"
+#include "stdlib/complex/float64/ctor.h"
 #include "stdlib/complex/reim.h"
 #include <stdio.h>
 
@@ -333,7 +333,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [@stdlib/math/base/special/cabs]: https://github.com/stdlib-js/math-base-special-cabs
 
-[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64
+[@stdlib/complex/float64/ctor]: https://github.com/stdlib-js/complex-float64-ctor
 
 <!-- <related-links> -->
 
